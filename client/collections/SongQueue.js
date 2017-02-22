@@ -22,6 +22,10 @@ var SongQueue = Backbone.Collection.extend({
     this.on('enqueue', function() {
       this.models.push();
     });
+    this.on('addMe', function(e) {
+      
+      console.log(e);
+    }, this);
   },
   playFirst: function() {
     // debugger;
